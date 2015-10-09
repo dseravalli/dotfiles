@@ -6,7 +6,6 @@ alias desk="~/Desktop"
 alias db="~/Dropbox"
 alias doit="git rev-parse --abbrev-ref HEAD | xargs git pull --rebase origin  && git rev-parse --abbrev-ref HEAD | xargs git push origin "
 alias doitbig="git stash && git rev-parse --abbrev-ref HEAD | xargs git pull --rebase origin  && git rev-parse --abbrev-ref HEAD | xargs git push origin && git stash pop"
-alias lr='cd ~/letsrumbl/letsrumbl' 
 
 unsetopt correct
 unsetopt correct_all
@@ -35,8 +34,4 @@ export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/opt/coreutils/libexec/gnubin:"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 eval "$(rbenv init -)"
-
-export RAILS_ENV=local
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+. ~/.nvm/nvm.sh
