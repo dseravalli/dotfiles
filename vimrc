@@ -40,8 +40,12 @@ set formatoptions=qrn1
 set colorcolumn=+1
 set clipboard=unnamed
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-set backupdir=~/.vim/backups
+
 set undodir=~/.vim/undo
+
+set backup
+set writebackup
+set backupdir=~/.vim/backups
 
 " Syntastic
 " set statusline+=%#warningmsg#

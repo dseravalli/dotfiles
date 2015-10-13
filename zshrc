@@ -34,4 +34,7 @@ export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/opt/coreutils/libexec/gnubin:"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 eval "$(rbenv init -)"
+
 . ~/.nvm/nvm.sh
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
