@@ -6,6 +6,12 @@ alias desk="~/Desktop"
 alias db="~/Dropbox"
 alias doit="git rev-parse --abbrev-ref HEAD | xargs git pull --rebase origin  && git rev-parse --abbrev-ref HEAD | xargs git push origin "
 alias doitbig="git stash && git rev-parse --abbrev-ref HEAD | xargs git pull --rebase origin  && git rev-parse --abbrev-ref HEAD | xargs git push origin && git stash pop"
+alias bfg="java -jar /usr/local/bin/bfg.jar"
+alias scheme="rlwrap -r -c -f /Users/dseravalli/Developer/scheme/mit_scheme_bindings.txt scheme"
+alias dev="cd ~/Dropbox/Developer"
+alias ml="cd ~/MorphicLabs"
+alias dcomp="docker-compose"
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
 unsetopt correct
 unsetopt correct_all
@@ -30,11 +36,32 @@ elif type complete &>/dev/null; then
 fi
 ### realtime completion - end ###
 
+export EDITOR=vim
 export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/opt/coreutils/libexec/gnubin:"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 eval "$(rbenv init -)"
+eval "$(thefuck --alias)"
 
 . ~/.nvm/nvm.sh
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# export GOPATH=~/Developer/Go
+# export GOROOT=/usr/local/opt/go/libexec/bin
+# export PATH=$PATH:$GOROOT
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dseravalli/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dseravalli/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dseravalli/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/dseravalli/google-cloud-sdk/completion.zsh.inc'; fi
+
+ssh-add -K ~/.ssh/id_rsa 2>/dev/null
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/dseravalli/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/dseravalli/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/dseravalli/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/dseravalli/.nvm/versions/node/v6.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

@@ -1,7 +1,7 @@
 [push]
 	default = current
 [user]
-	name = Dan Seravalli
+	name = Daniel Seravalli
 	email = danielseravalli@gmail.com
 [merge]
   conflictctyle = diff3
